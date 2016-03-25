@@ -15,16 +15,19 @@ public class FirstTest {
     {
         driver = new FirefoxDriver();
     }
+
     @Before
     public void openWebpage()
     {
         driver.get("http://the-internet.herokuapp.com");
     }
+
     @Test
     public void checkTheTitle_shouldFail()
     {
         assertTrue(driver.getTitle().equals("NOT THE INTERNET"));
     }
+
     @Test
     public void checkTheTitle_shouldPass()
     {
@@ -35,6 +38,7 @@ public class FirstTest {
     {
         System.out.println("The title of the page is: " + driver.getTitle());
     }
+
     @AfterClass
     public static void closeBrowser()
     {
